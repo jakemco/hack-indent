@@ -15,7 +15,7 @@ let b:did_indent = 1
 setlocal nolisp
 setlocal autoindent
 setlocal indentexpr=HackIndent(v:lnum)
-setlocal indentkeys+=<:>,0=},0=)
+setlocal indentkeys+=<:>,0=},0=),0=>,0=]
 
 if exists('*HackIndent')
   finish
@@ -56,7 +56,7 @@ function! HackIndent(lnum)
     let l:ind += s:sw()
   endif
 
-  if l:thisl =~ '^\s*[)}]'
+  if l:thisl =~ '^\s*[>)}\]]'
     " this line closed a block
     let l:ind -= s:sw()
   endif
