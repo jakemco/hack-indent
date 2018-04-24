@@ -11,3 +11,7 @@ set nowrap
 set ts=2 sts=2 sw=2 et
 set autoindent
 filetype plugin indent on
+
+set ft=php
+setlocal comments=s1:/*,mb:*,ex:*/,://,:#
+setlocal fo=rcoqj

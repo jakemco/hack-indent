@@ -67,6 +67,15 @@ function! HackIndent(lnum)
     let l:ind -= s:sw()
   endif
 
+  if l:prevl =~ '/\*'
+    " previous line starts a multiline comment
+    let l:ind += 1
+  endif
+
+  if l:prevl =~ '\*/'
+    let l:ind -= 1
+  endif
+
   return l:ind
 endfunction
 
