@@ -1,5 +1,5 @@
 " Vim indent file
-" Language:	PHP
+" Language:	Hack
 " Maintainer:	Jacob Cordero (https://github.com/jakemco/hack-indent)
 " Last Change: 2017 Feb 20
 "
